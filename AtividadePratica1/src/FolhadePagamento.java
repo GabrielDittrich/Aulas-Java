@@ -8,6 +8,12 @@ public class FolhadePagamento {
 
     }
 
+    public FolhadePagamento(String nomeFunc, float horasTrab, float valorHora) {
+        this.nomeFunc = nomeFunc;
+        this.horasTrab = horasTrab;
+        this.valorHora = valorHora;
+    }
+
     public String getNomeFunc() {
         return nomeFunc;
     }
@@ -39,7 +45,7 @@ public class FolhadePagamento {
         return valor;
     }
 
-    public static float calcularINSS(float salarioBruto) {
+    public float calcularINSS(float salarioBruto) {
         float inss;
         if (salarioBruto <= 868.29) {
             inss = 0.08f * salarioBruto;
@@ -53,11 +59,11 @@ public class FolhadePagamento {
         return inss;
     }
 
-    public static float calcularFGTS(float salarioBruto) {
+    public float calcularFGTS(float salarioBruto) {
         return 0.08f * salarioBruto;
     }
 
-    public static float calcularIR(float salarioBruto) {
+    public float calcularIR(float salarioBruto) {
         float ir;
         if (salarioBruto <= 1372.81) {
             ir = 0;

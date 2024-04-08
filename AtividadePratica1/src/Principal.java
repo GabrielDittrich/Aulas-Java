@@ -13,7 +13,6 @@ public class Principal {
             switch (menu) {
                 case 1:
 
-                    System.out.println("Calcular a folha de pagamento.");
                     FolhadePagamento f1 = new FolhadePagamento();
 
                     System.out.println("Nome do Funcionario: ");
@@ -36,6 +35,7 @@ public class Principal {
                     System.out
                             .println("FGTS: " + f1.calcularFGTS(f1.salarioBruto(f1.getHorasTrab(), f1.getValorHora())));
                     break;
+
                 case 2:
                     System.out.println("Tchauzinho!!");
                 default:
