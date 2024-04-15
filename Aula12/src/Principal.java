@@ -22,6 +22,6 @@ public class Principal {
         System.out.println(prof1.toString());
 
         Bolsista b1 = new Bolsista("Nobinari", "nobinari@gmail.com", "555555", "Integral");
-        System.out.println(b1.toString());
+        System.out.println( b1.toString());
     }
 }
