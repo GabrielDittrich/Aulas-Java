@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Console {
@@ -20,5 +19,7 @@ public class Console {
     public static String lerString() {
         return leitor.nextLine();
     }
+
+
 
 }

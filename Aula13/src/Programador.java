@@ -2,14 +2,6 @@ public class Programador extends Funcionario {
 
     private String linguagem;
 
-    public String getLinguagem() {
-        return linguagem;
-    }
-
-    public void setLinguagem(String linguagem) {
-        this.linguagem = linguagem;
-    }
-
     public Programador(String linguagem) {
         this.linguagem = linguagem;
     }
@@ -19,11 +11,20 @@ public class Programador extends Funcionario {
         this.linguagem = linguagem;
     }
 
-    public Programador() {
+    public String getLinguagem() {
+        return linguagem;
+    }
+
+    public void setLinguagem(String linguagem) {
+        this.linguagem = linguagem;
     }
 
     @Override
     public String toString() {
-        return super.toString() + "Linguagens que dominam: " + linguagem + "\n";
+        
+        return super.toString() + "Linguagens que domina:" + linguagem;
     }
+
+    
+    
 }
