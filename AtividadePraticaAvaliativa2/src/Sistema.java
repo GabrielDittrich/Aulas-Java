@@ -140,7 +140,7 @@ public class Sistema {
             
                 for (Animal temp : Cadastro.GetListaAnimais()) {
                     Cadastro.excluir(buscarAnimal);
-                    System.out.println("\nExcluido com sucesso");
+                    System.out.println("\nAnimal excluido com sucesso");
 
                     return;
             }}
