@@ -7,7 +7,8 @@ public class Sistema {
         System.out.println("3) Cadastrar Reptil");
         System.out.println("4) Procurar Animal");
         System.out.println("5) Listar Todos os Animais");
-        System.out.println("6) Excluir todos os Animais");
+        System.out.println("6) Excluir animal da lista");
+        System.out.println("7) Excluir todos os animais da lista");
         System.out.println("0) Sair");
         System.out.println("\nDigite a opção: ");
     }
@@ -118,7 +119,7 @@ public class Sistema {
 
             case 5:
 
-                System.out.println("\nlistar todos os animais cadastrados: ");
+                System.out.println("\nListar todos os animais cadastrados: ");
 
                 if (Cadastro.GetListaAnimais().size() == 0) {
                     System.out.println("Sem registros!");
@@ -129,18 +130,33 @@ public class Sistema {
                     System.out.println(temp.toString());
 
                 break;
-
             case 6:
+  
+            System.out.println("\nId do animal que deseja excluir: ");
+            id = Console.lerInt();
+
+            Animal buscarAnimal = Cadastro.buscar(id);
+            if (buscarAnimal != null) {
+                for (Animal temp : Cadastro.GetListaAnimais()) {
+                    Cadastro.excluir(buscarAnimal);
+                    System.out.println("\nExcluido com sucesso");
+
+                    return;
+            }
+
+                System.out.println("\nAnimal: " + id + " não foi encontrado");
+            
+        }
+
+            break;
+            case 7:
                 if (Cadastro.GetListaAnimais().size() == 0) {
                     System.out.println("Não há animais para excluir");
                     return;
                 }
-                for (Animal temp : Cadastro.GetListaAnimais()) {
-                    Cadastro.excluir(temp);
-                    System.out.println("\nCadastro de animais excluido");
 
-                }
                 Cadastro.GetListaAnimais().clear();
+                System.out.println("Animais da lista foram excluidos com sucesso");
                 break;
 
             case 0:
