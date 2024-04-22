@@ -1,10 +1,10 @@
 public class Sistema {
 
     private static void exibirMenu() {
-        System.out.println("\nFUNCIONARIO_SYSTEM");
-        System.out.println("1) Cadastrar Animal");
+        System.out.println("\nANIMAL_SYSTEM");
+        System.out.println("1) Cadastrar Mamifero");
         System.out.println("2) Cadastrar Ave");
-        System.out.println("3) Cadastrar Mamifero");
+        System.out.println("3) Cadastrar Reptil");
         System.out.println("4) Procurar Animal");
         System.out.println("5) Listar Todos os Animais");
         System.out.println("0) Sair");
