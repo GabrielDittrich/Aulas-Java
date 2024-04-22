@@ -7,7 +7,7 @@ public class Sistema {
         System.out.println("3) Cadastrar Reptil");
         System.out.println("4) Procurar Animal");
         System.out.println("5) Listar Todos os Animais");
-        System.out.println("6) Excluir animal da lista");
+        System.out.println("6) Excluir um animal da lista");
         System.out.println("7) Excluir todos os animais da lista");
         System.out.println("0) Sair");
         System.out.println("\nDigite a opção: ");
@@ -137,16 +137,17 @@ public class Sistema {
 
             Animal buscarAnimal = Cadastro.buscar(id);
             if (buscarAnimal != null) {
+            
                 for (Animal temp : Cadastro.GetListaAnimais()) {
                     Cadastro.excluir(buscarAnimal);
                     System.out.println("\nExcluido com sucesso");
 
                     return;
-            }
+            }}
 
-                System.out.println("\nAnimal: " + id + " não foi encontrado");
+                System.out.println("\nAnimal com o id: " + id + " não foi encontrado");
             
-        }
+        
 
             break;
             case 7:
