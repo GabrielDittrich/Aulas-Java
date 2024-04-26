@@ -1,8 +1,16 @@
-public class Gerente extends Funcionario {
+public class Gerente extends Funcionario{
 
-    private String nomeDoProjeto;
+   //public void apresentacao() {
+    //System.out.println("Eu sou o gerente " + this.getNome());
+    
+    public String nomeDoProjeto;
 
-    public Gerente() {
+    public String getNomeDoProjeto() {
+        return nomeDoProjeto;
+    }
+
+    public void setNomeDoProjeto(String nomeDoProjeto) {
+        this.nomeDoProjeto = nomeDoProjeto;
     }
 
     public Gerente(String nomeDoProjeto) {
@@ -14,17 +22,12 @@ public class Gerente extends Funcionario {
         this.nomeDoProjeto = nomeDoProjeto;
     }
 
-    public void setNomeDoProjeto(String nomeDoProjeto) {
-        this.nomeDoProjeto = nomeDoProjeto;
-    }
-
-    public String getNomeDoProjeto() {
-        return nomeDoProjeto;
-    }
-
     @Override
     public String toString() {
-        return super.toString() + "\nNome do projeto: " + nomeDoProjeto + "\n";
+        
+        return super.toString() + "\nNome do projeto: " + nomeDoProjeto;
     }
 
-}
+ }
+                                                                       
+

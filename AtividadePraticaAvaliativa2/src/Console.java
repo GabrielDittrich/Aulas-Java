@@ -20,6 +20,4 @@ public class Console {
         return leitor.nextLine();
     }
 
-
-
 }
