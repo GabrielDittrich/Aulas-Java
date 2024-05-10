@@ -4,6 +4,7 @@ public abstract class Pessoa implements Acoes {
     private String email;
 
     public Pessoa() {
+
     }
 
     public Pessoa(String nome, String email) {
@@ -29,7 +30,9 @@ public abstract class Pessoa implements Acoes {
 
     @Override
     public String toString() {
-        return "\nNome: " + nome + "\nEmail: " + email;
+
+        return "\nNome: " + nome +
+                "\nE-mail: " + email;
     }
 
     public abstract String falar();

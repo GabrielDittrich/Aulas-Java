@@ -1,36 +1,47 @@
 public class Professor extends Pessoa {
 
-    private String diciplina;
+    private String disciplinas;
 
     public Professor() {
+
     }
 
-    public Professor(String nome, String email, String diciplina) {
+    public Professor(String disciplinas) {
+        this.disciplinas = disciplinas;
+    }
+
+    public Professor(String nome, String email, String disciplinas) {
         super(nome, email);
-        this.diciplina = diciplina;
+        this.disciplinas = disciplinas;
     }
 
-    public String getDiciplina() {
-        return diciplina;
+    public String getDisciplinas() {
+        return disciplinas;
     }
 
-    public void setDiciplina(String diciplina) {
-        this.diciplina = diciplina;
+    public void setDisciplinas(String disciplinas) {
+        this.disciplinas = disciplinas;
     }
 
     @Override
     public String toString() {
 
-        return super.toString() + "\nDiciplinas: " + diciplina;
+        return super.toString() +
+                "\nDisciplinas: " + disciplinas;
     }
 
     @Override
     public String falar() {
-        return "\nO Professor está lecionando";
+
+        return "O Professor " + getNome() +
+                " está lecionando!";
     }
 
     @Override
     public String estudar() {
-        return "\nO Professoar " + getNome() + " Está estudando para a aula";
+
+        return "O Professor " + getNome() +
+                " está preparando a aula";
     }
+
 }
