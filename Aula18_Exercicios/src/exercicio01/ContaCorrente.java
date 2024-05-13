@@ -26,14 +26,6 @@ public class ContaCorrente extends ContaBancaria {
     }
 
     @Override
-    public void depositar(float valor) {
-
-        saldo += valor;
-
-        System.out.println("\nO valor R$ " + valor + " foi depositado na conta " + numConta);
-    }
-
-    @Override
     public void exibirSaldo() {
         System.out.println("\nConta corrente numero: " + numConta);
         System.out.println("Nome do Cliente: " + nomeCliente);

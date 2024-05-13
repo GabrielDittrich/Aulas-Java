@@ -14,7 +14,14 @@ public abstract class ContaBancaria {
 
     public abstract void sacar(float valor) throws Exception;
 
-    public abstract void depositar(float valor);
+    public void depositar(float valor) {
+
+        saldo += valor;
+
+        System.out.println("\nO valor R$ " + valor +
+                " foi depositado na conta " + numConta);
+
+    }
 
     public abstract void exibirSaldo();
 
